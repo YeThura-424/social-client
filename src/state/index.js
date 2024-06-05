@@ -22,6 +22,26 @@ export const authSlice = createSlice({
       state.user = null;
       state.token = null;
     },
-    
+    setFriends: (state, action) => {
+      if (state.user) {
+        state.user.friends = action.payload.friends;
+      } else {
+        console.error("User Friends does not exits :(");
+      }
+    },
+    setPosts: (state, action) => {
+      state.posts = action.payload.posts;
+    },
+    setPost: (state, action) => {
+      const updatedPosts = state.posts.mat((post) => {
+        if (post._id === action.payload.post_id) return action.payload.post;
+        return post;
+      });
+      state.posts = updatedPosts;
+    }
   }
 })
+
+export const { setMode, setLogin, setFriends, setPosts, setPost } = authSlice.actions;
+
+export default authSlice.reducer;
