@@ -5,3 +5,5 @@ import {
   ShareOutlined,
 } from "@mui/icons-material";
 import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import flexBetween from 'components/FlexBetween';
+import Friend from "components/Friend";
