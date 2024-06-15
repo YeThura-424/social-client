@@ -23,3 +23,16 @@ body,
   width: 310px;
   z-index: 3;
 }
+.post-widget {
+  position: relative;
+  left: 30%;
+}
+
+.advert-friendlist-widget {
+  position: fixed;
+  width: 310px;
+  height: 80vh;
+  z-index: 3;
+  right: 4%;
+  overflow-y: auto;
+}
