@@ -24,20 +24,23 @@ const HomePage = () => {
         >
           <Box
             flexBasis={isNonMobileScreens ? "26%" : undefined}
-            className="user-widget"
+            className={isNonMobileScreens ? "user-widget" : ""}
           >
             <UserWidget userId={_id} picturePath={picturePath} />
           </Box>
           <Box
             flexBasis={isNonMobileScreens ? "42%" : undefined}
             mt={isNonMobileScreens ? undefined : "2rem"}
-            className="post-widget"
+            className={isNonMobileScreens ? "post-widget" : ""}
           >
             <MyPostWidget picturePath={picturePath} />
             <PostsWidget userId={_id} />
           </Box>
           {isNonMobileScreens && (
-            <Box flexBasis="26%" className="advert-friendlist-widget">
+            <Box
+              flexBasis="26%"
+              className={isNonMobileScreens ? "advert-friendlist-widget" : ""}
+            >
               <AdvertWidget />
               <Box m="2rem 0" />
               <FriendListWidget userId={_id} />
