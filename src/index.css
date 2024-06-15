@@ -1,9 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 html,
 body,
-#root{
+#root {
   height: 100%;
   width: 100%;
   font-family: "Rubik", sans-serif;
+}
+
+.MuiBox-root.css-1dk34ka {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.MuiBox-root.css-6o1yxd {
+  position: absolute;
+  top: 10%;
+}
+
+.user-widget {
+  position: fixed;
+  width: 310px;
+  z-index: 3;
 }

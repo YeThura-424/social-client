@@ -7,13 +7,13 @@ const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   const token = useSelector((state) => state.token);
-  console.log(posts);
+  // console.log(posts);
   const getPosts = async () => {
     const response = await fetch("http://localhost:3001/posts", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
-    console.log("abo", response);
+    // console.log("abo", response);
     const data = await response.json();
     dispatch(setPosts({ posts: data }));
   };
@@ -26,7 +26,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
         headers: { Authorization: `Bearer ${token}` },
       }
     );
-    console.log("abo2", response);
+    // console.log("abo2", response);
     const data = await response.json();
     dispatch(setPosts({ posts: data }));
   };
