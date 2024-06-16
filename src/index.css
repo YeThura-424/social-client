@@ -18,6 +18,11 @@ body,
   top: 10%;
 }
 
+.MuiBox-root.css-s6io7c {
+  position: absolute;
+  top: 10%;
+}
+
 .user-widget {
   position: fixed;
   width: 310px;

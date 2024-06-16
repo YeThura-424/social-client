@@ -39,7 +39,10 @@ const ProfilePage = () => {
         gap="2rem"
         justifyContent="center"
       >
-        <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+        <Box
+          flexBasis={isNonMobileScreens ? "26%" : undefined}
+          className={isNonMobileScreens ? "user-profile" : ""}
+        >
           <UserWidget userId={userId} picturePath={user.picturePath} />
           <Box m="2rem 0" />
           <FriendListWidget userId={userId} />
@@ -47,6 +50,7 @@ const ProfilePage = () => {
         <Box
           flexBasis={isNonMobileScreens ? "42%" : undefined}
           mt={isNonMobileScreens ? undefined : "2rem"}
+          className={isNonMobileScreens ? "user-profile" : ""}
         >
           <MyPostWidget picturePath={user.picturePath} />
           <Box m="2rem 0" />
